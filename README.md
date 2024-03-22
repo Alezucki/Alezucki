@@ -4,6 +4,6 @@
 - 💞️ Voglio collaborare nella Programmazione
 - 📫 Alessandrozuchi2004@gmail.com o Alessandrozuchi@outlook.it
 - 😄 Pronomi: Lui
-- ⚡ fatto divertente: nulla lol 
+- ⚡ Fatto divertente: nulla lol 
 
 
