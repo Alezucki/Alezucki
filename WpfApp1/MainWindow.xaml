@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.FinestraPrincipale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Le Chat" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="PannelloChats" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="50"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+            <WrapPanel Orientation="Horizontal" Grid.Row="0">
+                <Button Background="White" Height="50" Width="50" BorderThickness="0">
+                    <Image Name="Impostazioni" Source="C:\Users\AleZu\Desktop\WpfApp1\WpfApp1\Impostazioni.jpg" Margin="10" RenderTransformOrigin="2.702,0.521"/>
+                </Button>
+                <Label Content="Chat" FontSize="25" FontFamily="Futura" Grid.Row="0" Margin ="5,5,5,5" />
+                
+            </WrapPanel>
+            
+            
+            <ScrollViewer x:Name="BarraChat" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Background="AliceBlue" Grid.Row="1">
+                <StackPanel Orientation="Vertical" Name="PannelloChat">
+
+                    <Button x:Name="AggiungiChat" Content="+ Aggiungi una Chat" FontSize="15" FontFamily="Futura" Foreground="DimGray" Height="40" Background="White" BorderThickness="0" Click="CreaChat"/>
+                </StackPanel>
+                
+            </ScrollViewer>
+
+        </Grid>
+        <Grid x:Name="TestoMsg" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="BordoInput" CornerRadius="10" Grid.Row="1" Width="500" Margin="10" BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left">
+                <TextBox Text="Inserisci del testo" x:Name="InputTestuale" TextAlignment="Left" TextWrapping="Wrap" FontSize="15" FontFamily="Ubuntu" VerticalAlignment="Center" Margin="10" Foreground="Gray" BorderThickness="0" GotFocus="ReazioneClickInputTestuale" LostFocus="ReazioneDeselezioneInputTestuale"/>
+            </Border>
+        </Grid>
+
+
+
+    </Grid>
+</Window>
